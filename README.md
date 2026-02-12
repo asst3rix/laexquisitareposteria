@@ -1,1 +1,1 @@
-# laexquisitareposteria
+Online store of a pastry shop.
