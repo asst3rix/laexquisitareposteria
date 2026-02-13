@@ -90,14 +90,14 @@ nav a {
     width: 100%;
 }
 
-.product-card h2 {
+.product-card h3 {
     color: #AAC4F5;
 }
 
 .price {
     display: flex;
     gap: 1rem;
-    /*align-self: flex-end;*/
+    align-self: flex-end;
 }
 
 .price p {
