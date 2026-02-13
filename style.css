@@ -33,12 +33,17 @@ ol {
 
 body {
     background-color: #FFF8DE;
+    font-family: 'PT Serif', serif;
+}
+
+nav,
+#products {
+    padding: 0.5rem 1rem;
 }
 
 nav {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
 }
 
 nav,
@@ -59,7 +64,6 @@ nav a {
 
 nav ul {
     display: flex;
-    font-family: 'PT Serif', serif;
     font-weight: 700;
     font-size: 1.2rem;
     padding-top: 0.3125rem;
@@ -67,4 +71,47 @@ nav ul {
 
 nav a {
     text-decoration: none;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.product-card img {
+    width: 100%;
+}
+
+.product-card h2 {
+    color: #AAC4F5;
+}
+
+.price {
+    display: flex;
+    gap: 1rem;
+    /*align-self: flex-end;*/
+}
+
+.price p {
+    font-size: 1.5rem;
+}
+
+.price a {
+    text-decoration: none;
+    color: #FFF8DE;
+    background-color: #AAC4F5;
+    border-radius: 999px;
+    padding: 0.3125rem 2.5rem;
+}
+
+.price a:hover {
+    cursor: pointer;
 }
