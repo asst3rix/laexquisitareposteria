@@ -58,9 +58,11 @@ nav a {
 }
 
 #title {
-    width: 12.5rem; 
-    height: auto; /* To keep proportions */ 
-    display: block; /* To avoid space below the image */
+    width: 12.5rem;
+    height: auto;
+    /* To keep proportions */
+    display: block;
+    /* To avoid space below the image */
 }
 
 nav ul {
@@ -82,7 +84,7 @@ main {
 
 #products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -95,6 +97,7 @@ main {
 
 .product-card img {
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .product-card h3 {
