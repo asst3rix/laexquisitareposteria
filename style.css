@@ -36,8 +36,9 @@ body {
     font-family: 'PT Serif', serif;
 }
 
-nav,
-#products {
+header,
+main,
+footer {
     padding: 0.5rem 1rem;
 }
 
@@ -71,6 +72,12 @@ nav ul {
 
 nav a {
     text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #products {
