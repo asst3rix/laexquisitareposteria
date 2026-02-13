@@ -31,3 +31,40 @@ ol {
 
 /**********************/
 
+body {
+    background-color: #FFF8DE;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+nav,
+nav ul {
+    gap: 4rem;
+}
+
+nav,
+nav a {
+    color: #AAC4F5;
+}
+
+#title {
+    width: 12.5rem; 
+    height: auto; /* To keep proportions */ 
+    display: block; /* To avoid space below the image */
+}
+
+nav ul {
+    display: flex;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-top: 0.3125rem;
+}
+
+nav a {
+    text-decoration: none;
+}
