@@ -36,13 +36,21 @@ body {
     font-family: 'PT Serif', serif;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+}
+
+body,
+main {
+    gap: 3rem;
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+nav,
+footer {
     background-color: #FFF2C6;
 }
 
@@ -79,7 +87,6 @@ nav a {
 main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 #products {
@@ -148,4 +155,38 @@ h2 {
 
 #aboutUs img {
     width: 40vh;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#socialMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-card img {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.contact-card a {
+    color: #8CA9FF;
+}
+
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
 }
