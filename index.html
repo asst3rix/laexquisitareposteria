@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="inicio">
     <header>
         <nav>
-            <h1><img src="images/title.png" alt="La Exquisita" id="title"></h1>
+            <h1><a href="#inicio"><img src="images/title.png" alt="La Exquisita" id="title"></a></h1>
             <ul>
-                <li><a href="#products">Productos</a></li>
                 <li><a href="#aboutUs">Sobre nosotros</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
@@ -25,39 +24,26 @@
     </header>
     <main>
         <section id="products">
-            <article class="product-card">
+            <article id="semitas">
                 <img src="images/semitas.jpg" alt="Semitas">
-                <h3>Semitas</h3>
-                <p>Curabitur facilisis magna et tortor commodo varius. Aenean ipsum erat, rutrum sit amet risus
-                    sagittis, fermentum pretium massa.</p>
-                <div class="price">
-                    <a href="">Pídelo!</a>
-                    <p>4,99€</p>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="images/cake_1.jpg" alt="Tarta de frutas">
-                <h3>Tarta de frutas</h3>
-                <p>In molestie metus eget sapien tincidunt venenatis. Vestibulum interdum arcu et nunc eleifend porta.
-                    Donec vulputate sollicitudin tempor.</p>
-                <div class="price">
-                    <a href="">Pídelo!</a>
-                    <p>29,99€</p>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="images/cake_2.jpg" alt="Tarta de chocolate">
-                <h3>Tarta de chocolate</h3>
-                <p>Vivamus luctus venenatis ligula, sit amet faucibus nunc venenatis et. Donec viverra bibendum risus,
-                    nec laoreet est feugiat aliquam.</p>
-                <div class="price">
-                    <a href="">Pídelo!</a>
-                    <p>29,99€</p>
+                <div id="sDescription">
+                    <h2>Semitas</h2>
+                    <p>Maecenas egestas luctus purus, sed ornare neque pretium vel. Nulla id semper libero, sagittis
+                        scelerisque mauris. Vivamus cursus felis ut enim euismod laoreet.</p>
+                    <p>Mauris sem magna, pretium et dignissim quis, sodales sit amet nulla. In vulputate nisi quis
+                        sapien varius, et pellentesque purus dignissim.</p>
+                    <p>Ut ac dolor vitae lectus iaculis gravida sit amet hendrerit est. Curabitur risus tortor, tempor
+                        nec scelerisque et, venenatis eget ex. Ut dictum maximus dui, ut malesuada arcu hendrerit at.
+                    </p>
+                    <div class="price">
+                        <p>4,99€</p>
+                        <a href="">¡Lo quiero!</a>
+                    </div>
                 </div>
             </article>
         </section>
         <section id="aboutUs">
-            <div id="description">
+            <div id="auDescription">
                 <h2>Sobre nosotros</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit dapibus turpis eget
                     vulputate.
