@@ -1,0 +1,20 @@
+{
+    "name": "La Exquisita Repostería Hondurenya",
+    "short_name": "La Exquisita",
+    "start_url": "../../index.html",
+    "display": "standalone",
+    "theme_color": "#FFF8DE",
+    "background_color": "#FFF8DE",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
