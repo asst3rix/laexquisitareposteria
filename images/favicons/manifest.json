@@ -3,7 +3,7 @@
     "short_name": "La Exquisita",
     "start_url": "../../index.html",
     "display": "standalone",
-    "theme_color": "#FFF8DE",
+    "theme_color": "#fff2c6",
     "background_color": "#FFF8DE",
     "icons": [
         {
