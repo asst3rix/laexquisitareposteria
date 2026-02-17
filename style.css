@@ -247,7 +247,7 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 532px) {
+@media (max-width: 547px) {
     nav {
         justify-content: space-between;
     }
