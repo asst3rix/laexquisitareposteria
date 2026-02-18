@@ -31,6 +31,18 @@ ol {
 
 /**********************/
 
+/**
+
+Cream
+> #FFF8DE
+> #FFF2C6
+
+Blue
+> #AAC4F5
+> #8CA9FF
+
+**/
+
 html {
     scroll-behavior: smooth;
 }
@@ -92,8 +104,8 @@ nav a:hover {
 
 nav a,
 nav a:hover,
-.price a,
-.price a:hover,
+.product-info a,
+.product-info a:hover,
 .contact-card a,
 .contact-card a:hover {
     transition: 0.3s;
@@ -128,54 +140,95 @@ section {
 }
 
 #products {
-    max-width: 80rem;
-    padding: 0 1rem;
-    margin: auto;
-}
-
-#semitas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(390px, 100%), 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    padding: 0 2rem;
 }
 
-#semitas img {
-    width: clamp(250px, 100%, 608px);
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    justify-self: center;
+@media (width < 1220px) {
+    #products {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 60rem;
+        margin: auto;
+    }
 }
 
-#sDescription {
+@media (width < 750px) {
+    #products {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+.product-cards {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
 }
 
-.price {
+.product-cards img {
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    flex-wrap: wrap;
+}
+
+.product-info h3 {
+        flex: 0 0 100%;
+    }
+
+.product-info div {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding-top: 0.7rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.price p {
-    font-size: 1.5rem;
+@media (width < 1220px) {
+    .product-info h3 {
+        flex: 1;
+    }
 }
 
-.price a {
+@media (width < 916px) {
+    .product-info h3 {
+        flex: 0 0 100%;
+    }
+}
+
+@media (width < 750px) {
+    .product-info h3 {
+        flex: 1;
+    }
+}
+
+@media (width < 442px) {
+    .product-info h3 {
+        flex: 0 0 100%;
+    }
+}
+
+.product-info a {
     text-decoration: none;
+    color: #8CA9FF;
+    border: 1px solid #AAC4F5;
+    padding: 0.2rem 1rem;
+    text-align: center;
+}
+
+.product-info a:hover {
+    cursor: pointer;
     color: #FFF8DE;
     background-color: #AAC4F5;
-    border-radius: 999px;
-    padding: 0.4rem 2.5rem;
-}
-
-.price a:hover {
-    cursor: pointer;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #aboutUsBackground {
