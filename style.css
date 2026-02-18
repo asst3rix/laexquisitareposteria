@@ -293,12 +293,25 @@ section {
 
 #aboutUs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(390px, 100%), 1fr));
+    /*grid-template-columns: repeat(auto-fit, minmax(min(390px, 100%), 1fr));*/
+    grid-template-columns: 2fr 1fr;
     align-items: center;
     gap: 2rem;
     max-width: 80rem;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     margin: auto;
+}
+
+@media (width < 890px) {
+    #aboutUs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width < 640px) {
+    #aboutUs {
+        padding: 2rem 1rem;
+    }
 }
 
 #auDescription {
@@ -310,7 +323,7 @@ section {
 
 #aboutUs img {
     width: 100%;
-    max-width: 25rem;
+    max-width: 20rem;
     height: auto;
     justify-self: center;
     align-self: center;
