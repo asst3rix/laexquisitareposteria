@@ -130,6 +130,62 @@ nav a:hover,
     display: none;
 }
 
+@media (width < 765px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+        background-color: #FFF2C6;
+        position: absolute;
+        top: 90px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .burger-menu span,
+    .burger-menu::before,
+    .burger-menu::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #AAC4F5;
+        margin: 5px 0;
+    }
+
+    /* When the menu is active we transform the line. */
+    /* Middle line disapears. */
+    .active-burger span {
+        opacity: 0;
+    }
+
+    /* The two other lines rotate. */
+    .active-burger::before {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .active-burger::after {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -298,60 +354,4 @@ section {
 footer {
     padding: 1.5rem 0;
     text-align: center;
-}
-
-@media (max-width: 547px) {
-    nav {
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 0;
-        width: 100%;
-        text-align: center;
-        background-color: #FFF2C6;
-        position: absolute;
-        top: 93px;
-        left: 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .burger-menu {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .burger-menu span,
-    .burger-menu::before,
-    .burger-menu::after {
-        content: "";
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: #AAC4F5;
-        margin: 5px 0;
-    }
-
-    /* When the menu is active we transform the line. */
-    /* Middle line disapears. */
-    .active-burger span {
-        opacity: 0;
-    }
-
-    /* The two other lines rotate. */
-    .active-burger::before {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .active-burger::after {
-        transform: translateY(-8px) rotate(-45deg);
-    }
 }
