@@ -29,7 +29,7 @@ ol {
     list-style: none;
 }
 
-/**********************/
+/****** INDEX.HTML ******/
 
 /**
 
@@ -52,6 +52,7 @@ body {
     font-family: 'PT Serif', serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -107,7 +108,9 @@ nav a:hover,
 .product-info a,
 .product-info a:hover,
 .contact-card a,
-.contact-card a:hover {
+.contact-card a:hover,
+#productPrice a,
+#productPrice a:hover {
     transition: 0.3s;
 }
 
@@ -189,6 +192,7 @@ nav a:hover,
 main {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 section {
@@ -223,7 +227,8 @@ section {
     gap: 1rem;
 }
 
-.product-cards img {
+.product-cards img,
+#detailedProduct img {
     width: 100%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -238,14 +243,7 @@ section {
 }
 
 .product-info h3 {
-        flex: 0 0 100%;
-    }
-
-.product-info div {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    flex: 0 0 100%;
 }
 
 @media (width < 1220px) {
@@ -272,7 +270,17 @@ section {
     }
 }
 
-.product-info a {
+.product-info div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.product-info a,
+#productPrice a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #8CA9FF;
     border: 1px solid #AAC4F5;
@@ -280,7 +288,8 @@ section {
     text-align: center;
 }
 
-.product-info a:hover {
+.product-info a:hover,
+#productPrice a:hover {
     cursor: pointer;
     color: #FFF8DE;
     background-color: #AAC4F5;
@@ -367,4 +376,52 @@ section {
 footer {
     padding: 1.5rem 0;
     text-align: center;
+}
+
+/****** PRODUCTS ******/
+
+#detailedProduct {
+    display: flex;
+    gap: 2rem 5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (width < 1000px) {
+    #detailedProduct {
+        flex-direction: column;
+        padding: 0 1rem;
+        max-width: 40rem;
+    }
+}
+
+#imgWrapper,
+#productDescription {
+    flex: 1;
+}
+
+#productDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#productTitle {
+    text-align: center;
+}
+
+#productPrice {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#productPrice p {
+    font-size: 2rem;
+}
+
+#productPrice a {
+    font-size: 1.1rem;
 }
