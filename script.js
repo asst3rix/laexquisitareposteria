@@ -7,6 +7,7 @@ function loadComponent(id, file) {
         });
 }
 
+loadComponent('head', 'head.html');
 loadComponent('header', 'header.html');
 loadComponent('footer', 'footer.html');
 
