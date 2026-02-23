@@ -1,16 +1,3 @@
-// Function to load the header and footer on the pages
-function loadComponent(id, file) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        });
-}
-
-loadComponent('head', 'head.html');
-loadComponent('header', 'header.html');
-loadComponent('footer', 'footer.html');
-
 // When we click the burger menu, we show the menu and change the icon to a cross.
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('nav-links');
