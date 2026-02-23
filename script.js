@@ -15,4 +15,17 @@ const script = (function () {
             burger.classList.remove('active-burger');
         });
     });
+
+    // To change primary picture on click on the gallery
+    const primaryImage = document.querySelector("#primaryImage");
+    const imagesGallery = document.querySelectorAll("#gallery img");
+    imagesGallery.forEach(img => {
+        img.addEventListener('click', () => {
+            primaryImage.src = img.src;
+            imagesGallery.forEach(img => {
+                img.style.opacity = 0.7;
+            });
+            img.style.opacity = 1;
+        });
+    });
 })();
