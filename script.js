@@ -18,7 +18,7 @@ const script = (function () {
 
     // To change primary picture on click on the gallery
     const primaryImage = document.querySelector("#primaryImage");
-    const imagesGallery = document.querySelectorAll("#gallery img");
+    const imagesGallery = document.querySelectorAll("#imagesGallery img");
     imagesGallery.forEach(img => {
         img.addEventListener('click', () => {
             primaryImage.src = img.src;
