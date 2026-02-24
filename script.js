@@ -16,15 +16,25 @@ const script = (function () {
         });
     });
 
-    // To change primary picture on click on the gallery
-    const primaryImage = document.querySelector("#primaryImage");
-    const imagesGallery = document.querySelectorAll("#imagesGallery img");
-    imagesGallery.forEach(img => {
+    // To change primary picture on click on the gallery.
+    const mainImageContainer = document.querySelector("#mainImageContainer");
+    const mainImages = document.querySelectorAll("#mainImageContainer img");
+    const thumbnails = document.querySelectorAll("#thumbnails img");
+    thumbnails.forEach((img, index) => {
         img.addEventListener('click', () => {
-            primaryImage.src = img.src;
-            imagesGallery.forEach(img => {
-                img.style.opacity = 0.7;
-            });
+            // We save the index of the image that has been clicked on.
+            const targetImg = mainImages[index];
+
+            // Security
+            if (targetImg && mainImageContainer) {
+                mainImageContainer.scrollTo({
+                    // We make sure we start from the beginning of mainImageContainer and not the left of the screen.
+                    left: targetImg.offsetLeft - mainImageContainer.offsetLeft
+                });
+            }
+
+            // We change opacity of the active image.
+            thumbnails.forEach(img => img.style.opacity = 0.7);
             img.style.opacity = 1;
         });
     });
