@@ -289,12 +289,15 @@ section {
     text-align: center;
 }
 
-.product-info a:hover,
-#productPrice a:hover {
-    cursor: pointer;
-    color: #FFF8DE;
-    background-color: #AAC4F5;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+@media (hover: hover) {
+    /* Hobering effect only on computer */
+    .product-info a:hover,
+    #productPrice a:hover {
+        cursor: pointer;
+        color: #FFF8DE;
+        background-color: #AAC4F5;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
 }
 
 #aboutUsBackground {
@@ -442,6 +445,10 @@ footer {
     opacity: 1;
 }
 
+#thumbnails img:hover {
+    opacity: 1 !important;
+}
+
 #productDescription {
     display: flex;
     flex-direction: column;
@@ -503,6 +510,15 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.other-product-cards img {
+    transition: 0.1s;
+}
+
+.other-product-cards img:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: 0.3s;
 }
 
 .other-product-cards div {
