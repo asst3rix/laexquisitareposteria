@@ -49,8 +49,8 @@ const thumbnailsManagement = (function () {
     const observerOptions = {
         // We give him where to observe.
         root: mainImageContainer,
-        // Image is consider active when 60% of its surface is visible.
-        threshold: 0.6  
+        // Image is consider active when 100% of its surface is visible.
+        threshold: 1  
     };
 
     // We give to IntersectionObserver, 1st the what to do (the function), 2nd what to use (observerOptions)
