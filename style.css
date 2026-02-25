@@ -251,7 +251,6 @@ section {
 }
 
 .product-cards img,
-#detailedProduct img,
 .other-product-cards img {
     width: 100%;
     height: auto;
@@ -420,6 +419,11 @@ footer {
     }
 }
 
+#detailedProduct img {
+    width: 100%;
+    height: auto;
+}
+
 #mainImageContainer {
     width: 100%;
     display: flex;
@@ -427,6 +431,7 @@ footer {
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #mainImageContainer::-webkit-scrollbar {
