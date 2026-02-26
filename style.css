@@ -94,7 +94,7 @@ header,
 #product-content,
 #aboutUsWrapper,
 #contact,
-footer  {
+footer {
     padding-inline: 1rem;
 }
 
@@ -316,10 +316,6 @@ footer {
     opacity: 1;
 }
 
-#thumbnails img:hover {
-    opacity: 1 !important;
-}
-
 #productDescription {
     display: flex;
     flex-direction: column;
@@ -386,6 +382,10 @@ footer {
     .contact-card a:hover {
         color: var(--light-blue);
     }
+
+    #thumbnails img:hover {
+        opacity: 1 !important;
+    }
 }
 
 /****** MEDIA QUERIES ******/
@@ -423,8 +423,12 @@ footer {
 }
 
 @media (width < 765px) {
+    #products {
+        grid-template-columns: 1fr;
+    }
 
     /****BURGER MENU****/
+
     nav {
         justify-content: space-between;
     }
@@ -477,11 +481,5 @@ footer {
 
     .active-burger::after {
         transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /*******************/
-
-    #products {
-        grid-template-columns: 1fr;
     }
 }
