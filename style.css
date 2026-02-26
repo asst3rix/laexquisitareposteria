@@ -82,6 +82,22 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+header,
+#products,
+#product-content,
+#aboutUsWrapper,
+#contact,
+footer  {
+    padding-inline: 1rem;
+}
+
+header,
+footer {
+    background-color: var(--secondary-cream);
+    padding-block: 1rem;
 }
 
 nav {
@@ -89,13 +105,6 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-nav,
-footer {
-    background-color: var(--secondary-cream);
 }
 
 nav,
@@ -137,7 +146,6 @@ section {
 }
 
 footer {
-    padding: 1.5rem 0;
     text-align: center;
 }
 
@@ -196,10 +204,9 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    padding: 0 2rem;
 }
 
-#aboutUsBackground {
+#aboutUsWrapper {
     background-color: white;
 }
 
@@ -209,7 +216,7 @@ footer {
     align-items: center;
     gap: 2rem;
     max-width: 80rem;
-    padding: 3rem 2rem;
+    padding-block: 3rem;
     margin: auto;
 }
 
@@ -231,7 +238,6 @@ footer {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    padding: 0 1rem;
     text-align: center;
 }
 
@@ -262,7 +268,6 @@ footer {
 #product-content {
     max-width: 80rem;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 #detailedProduct {
@@ -480,13 +485,6 @@ footer {
 
     #products {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-}
-
-@media (width < 640px) {
-    #aboutUs {
-        padding: 2rem 1rem;
     }
 }
 
