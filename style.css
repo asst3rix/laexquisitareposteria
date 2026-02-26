@@ -46,14 +46,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: var(--light-cream);
-    font-family: 'PT Serif', serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 a {
     text-decoration: none;
     transition: 0.3s;
@@ -62,10 +54,24 @@ a {
 h2 {
     color: var(--light-blue);
     text-align: center;
+    font-family: 'Brygada 1918', serif;
     font-size: 2.5rem;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 /****** LAYOUT ******/
+
+body {
+    background-color: var(--light-cream);
+    font-family: 'PT Serif', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 body,
 main {
@@ -144,8 +150,6 @@ footer {
 }
 
 .product-cards img {
-    width: 100%;
-    height: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.1s;
 }
@@ -217,9 +221,7 @@ footer {
 }
 
 #aboutUs img {
-    width: 100%;
     max-width: 20rem;
-    height: auto;
     justify-self: center;
     align-self: center;
 }
@@ -268,11 +270,6 @@ footer {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 1rem 5rem;
-}
-
-#detailedProduct img {
-    width: 100%;
-    height: auto;
 }
 
 #mainImageContainer {
@@ -423,6 +420,8 @@ footer {
 }
 
 @media (width < 765px) {
+
+    /****BURGER MENU****/
     nav {
         justify-content: space-between;
     }
@@ -476,6 +475,8 @@ footer {
     .active-burger::after {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    /*******************/
 
     #products {
         grid-template-columns: 1fr;
