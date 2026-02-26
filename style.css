@@ -278,7 +278,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 1rem 5rem;
+    gap: 1rem clamp(1rem, 2.5vw, 2rem);
 }
 
 #mainImageContainer {
@@ -324,7 +324,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2rem;
+    gap: 1rem 2rem;
 }
 
 #productTitle {
@@ -389,12 +389,6 @@ footer {
 }
 
 /****** MEDIA QUERIES ******/
-
-@media (width < 1280px) {
-    #detailedProduct {
-        gap: 1rem;
-    }
-}
 
 @media (width < 1220px) {
     #products {
