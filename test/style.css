@@ -153,6 +153,7 @@ section {
 }
 
 #products,
+#product-content,
 #aboutUs,
 #contact {
     padding-block: 2rem;
@@ -281,6 +282,7 @@ footer {
 #product-content {
     max-width: 80rem;
     margin: 0 auto;
+    gap: 2rem;
 }
 
 #detailedProduct {

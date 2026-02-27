@@ -20,14 +20,20 @@
 
 <body>
     <header>
-        <nav>
+        <div id="header">
             <h1><a href="../index.html#inicio"><img src="../images/title.png" alt="La Exquisita" id="title"></a></h1>
+            <div id="burger-container">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </div>
+        <nav>
             <ul id="nav-links" class="nav-links">
-                <li><a href="../index.html#inicio">Nuestros productos</a></li>
-                <li><a href="../index.html#aboutUs">Sobre nosotros</a></li>
-                <li><a href="../index.html#contact">Contacto</a></li>
+                <a href="../index.html#inicio"><li>Nuestros productos</li></a>
+                <a href="../index.html#aboutUs"><li>Sobre nosotros</li></a>
+                <a href="../index.html#contact"><li>Contacto</li></a>
             </ul>
-            <button id="burger" class="burger-menu"><span></span></button>
         </nav>
     </header>
     <main id="product-content">
