@@ -3,140 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Exquisita Repostería Hondurenya</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
-    <link rel="manifest" href="images/favicons/manifest.json">
-    <script src="script.js" defer></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body,
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FFF8DE;
+        }
+
+        h1 {
+            color: #AAC4F5;
+            font-size: clamp(1.5rem, 8vw, 3rem);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 0 20px;
+        }
+    </style>
 </head>
 
-<body id="inicio">
-    <header>
-        <nav>
-            <h1><a href="index.html#inicio"><img src="images/title.png" alt="La Exquisita" id="title"></a></h1>
-            <ul id="nav-links" class="nav-links">
-                <li><a href="index.html#inicio">Nuestros productos</a></li>
-                <li><a href="index.html#aboutUs">Sobre nosotros</a></li>
-                <li><a href="index.html#contact">Contacto</a></li>
-            </ul>
-            <button id="burger" class="burger-menu"><span></span></button>
-        </nav>
-    </header>
-    <main>
-        <section id="products">
-            <article class="product-cards">
-                <a href="product_pages/semitas.html" target="_blank"><img src="images/pack1.png" alt=""></a>
-                <div class="product-info">
-                    <h3>Pack Semitas</h3>
-                    <p>4,99€</p>
-                    <div>
-                        <a href="product_pages/semitas.html" target="_blank" class="buttons">Detalles</a>
-                        <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
-                    </div>
-                </div>
-            </article>
-            <article class="product-cards">
-                <a href="product_pages/familiar.html" target="_blank"><img src="images/pack2.png" alt=""></a>
-                <div class="product-info">
-                    <h3>Pack Familiar</h3>
-                    <p>4,99€</p>
-                    <div>
-                        <a href="product_pages/familiar.html" target="_blank" class="buttons">Detalles</a>
-                        <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
-                    </div>
-                </div>
-            </article>
-            <article class="product-cards">
-                <a href="product_pages/galletas.html" target="_blank"><img src="images/pack3.png" alt=""></a>
-                <div class="product-info">
-                    <h3>Pack Galletas</h3>
-                    <p>4,99€</p>
-                    <div>
-                        <a href="product_pages/galletas.html" target="_blank" class="buttons">Detalles</a>
-                        <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
-                    </div>
-                </div>
-            </article>
-            <article class="product-cards">
-                <a href="product_pages/bizcochos.html" target="_blank"><img src="images/pack4.png" alt=""></a>
-                <div class="product-info">
-                    <h3>Pack Bizcochos</h3>
-                    <p>4,99€</p>
-                    <div>
-                        <a href="product_pages/bizcochos.html" target="_blank" class="buttons">Detalles</a>
-                        <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <div id="aboutUsWrapper">
-            <section id="aboutUs">
-                <div id="auDescription">
-                    <h2>Sobre nosotros</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit dapibus turpis eget
-                        vulputate.
-                        Phasellus quis elementum neque, vel tempor eros. Aliquam vitae ullamcorper orci.</p>
-                    <p>Aenean pellentesque ante nec dui malesuada, vitae imperdiet arcu vulputate. Mauris et dignissim
-                        libero.
-                        Suspendisse feugiat gravida eros, non condimentum nibh venenatis a. Nulla a sem ante.</p>
-                    <p>Sed rutrum laoreet turpis, quis efficitur lorem sagittis quis. Nunc faucibus quam ac nulla
-                        ultrices
-                        mattis. In et tincidunt nibh, non aliquet quam. Sed eget leo vitae magna luctus imperdiet.</p>
-                    <p>Aliquam aliquam dolor id nisi dignissim, at tristique purus gravida. Integer turpis lorem,
-                        lobortis
-                        id nisi id, condimentum eleifend purus. Ut laoreet lorem nec rhoncus pulvinar. Maecenas pharetra
-                        eget sapien quis consectetur.</p>
-                </div>
-                <img src="images/logo.png" alt="Logo de La Exquisita Repostería Hondurenya">
-            </section>
-        </div>
-        <section id="contact">
-            <h2>Contacto</h2>
-            <h3>¿Tienes preguntas? Estamos a tu disposición en el:</h3>
-            <div id="whatsapp" class="contact-card">
-                <img src="images/whatsapp.png" alt="WhatsApp">
-                <p>+34 642 23 83 31</p>
-            </div>
-            <h3>Síguenos y descubre más de nuestro trabajo en:</h3>
-            <div id="socialMedia">
-                <div class="contact-card">
-                    <img src="images/instagram.png" alt="Instagram">
-                    <div>
-                        <p><a href="https://www.instagram.com/laexquisitabcn/" target="_blank">@laexquisitabcn</a></p>
-                        <p><a href="https://www.instagram.com/laexquisitagirona/" target="_blank">@laexquisitagirona</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <img src="images/tic-tok.png" alt="Tik Tok">
-                    <p><a href="https://www.tiktok.com/@laexquisitabcn" target="_blank">@laexquisitabcn</a></p>
-                </div>
-            </div>
-            <h3>Descubre el arte de nuestra pastelería en persona. ¡Te esperamos!</h3>
-            <div id="googleMaps" class="contact-card">
-                <img src="images/google-maps.png" alt="Google Maps">
-                <div>
-                    <p>Barcelona: <a href="https://maps.app.goo.gl/Bq8Y5G7KhbfAtetQ6" target="_blank">Carrer Llobregat,
-                            22, 08904
-                            L'Hospitalet de Llobregat, Barcelona</a></p>
-                    <p>Girona: <a href="https://maps.app.goo.gl/QqWNoPjrSSZ1WHJ6A" target="_blank">Av. de St. Narcís,
-                            65, 17005
-                            Girona</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 La Exquisita Repostería Hondurenya</p>
-    </footer>
+<body>
+    <h1>Estamos trabajando. Nos vemos pronto! :)</h1>
 </body>
 
 </html>
