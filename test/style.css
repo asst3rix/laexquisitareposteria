@@ -65,6 +65,7 @@ h2 {
 img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 a, 
@@ -84,13 +85,13 @@ body {
     min-height: 100vh;
 }
 
-header > div,
+header,
 #products,
 #product-content,
 #aboutUsWrapper,
 #contact,
 footer {
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
 }
 
 header > div,
@@ -109,7 +110,7 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -140,13 +141,22 @@ nav a {
 
 .nav-links {
     display: flex;
-    font-weight: 700;
     font-size: 1.2rem;
     padding-top: 0.3125rem;
 }
 
+.nav-links li {
+    line-height: 2rem;
+}
+
 #burger-container {
     display: none;
+}
+
+#socialMediaHeader {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 main {
@@ -156,7 +166,7 @@ main {
 }
 
 section {
-    scroll-margin-top: 6.5rem;
+    scroll-margin-top: 5rem;
 }
 
 #products,
@@ -440,7 +450,7 @@ footer {
     }
 }
 
-@media (width < 765px) {
+@media (width < 970px) {
     #products {
         grid-template-columns: 1fr;
     }
@@ -449,6 +459,11 @@ footer {
 
     header {
         gap: 0;
+    }
+
+    header,
+    #nav-links {
+        padding-inline: 1.5rem;
     }
 
     header > div {
@@ -474,15 +489,15 @@ footer {
         text-align: center;
         background-color: var(--secondary-cream);
         position: absolute;
-        top: -4.1rem;
+        top: -8.5rem;
         left: 0;
         z-index: 998;
         transition: all 0.2s ease-out;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .nav-links.active {
-        transform: translateY(9rem);
+        transform: translateY(13.4rem);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .nav-links li {
