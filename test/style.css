@@ -503,7 +503,7 @@ footer {
         height: 4px;
         background-color: var(--light-blue);
         border-radius: 1px;
-        transition: all 0.1s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     .clicked .line-1 {
