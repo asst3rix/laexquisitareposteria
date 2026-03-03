@@ -34,10 +34,14 @@ ol {
 /****** VARIABLES ******/
 
 :root {
+    /** COLORS **/
     --light-cream: #FFF8DE;
     --secondary-cream: #FFF2C6;
     --light-blue: #AAC4F5;
     --secondary-blue: #8CA9FF;
+
+    /** BURGER MENU **/
+    --burger-anim-duration: 0.3s;
 }
 
 /****** GENERAL STYLE ******/
@@ -68,9 +72,9 @@ img {
     display: block;
 }
 
-a, 
-button, 
-#burger-container, 
+a,
+button,
+#burger-container,
 .nav-links li a {
     -webkit-tap-highlight-color: transparent;
 }
@@ -94,7 +98,7 @@ footer {
     padding-inline: 1.5rem;
 }
 
-header > div,
+header>div,
 footer {
     padding-block: 1rem;
 }
@@ -462,12 +466,12 @@ footer {
         padding-inline: 0;
     }
 
-    header > div,
+    header>div,
     #nav-links {
         padding-inline: 1.5rem;
     }
 
-    header > div {
+    header>div {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -519,11 +523,22 @@ footer {
         height: 3px;
         background-color: var(--light-blue);
         border-radius: 1px;
-        transition: all 0.3s ease-in-out;
+    }
+
+    .unclicked .line-1 {
+        animation: burger-top-reverse var(--burger-anim-duration) forwards;
+    }
+
+    .line-2 {
+        transition: all var(--burger-anim-duration) ease-in-out;
+    }
+
+    .unclicked .line-3 {
+        animation: burger-bottom-reverse var(--burger-anim-duration) forwards;
     }
 
     .clicked .line-1 {
-        transform: rotate(45deg) translate(0.57rem, 0.47rem);
+        animation: burger-top var(--burger-anim-duration) forwards;
     }
 
     .clicked .line-2 {
@@ -531,6 +546,62 @@ footer {
     }
 
     .clicked .line-3 {
-        transform: rotate(-45deg) translate(0.6rem, -0.47rem);
+        animation: burger-bottom var(--burger-anim-duration) forwards;
+    }
+
+    @keyframes burger-top {
+        0% {
+            transform: translateY(0) rotate(0);
+        }
+
+        75% {
+            transform: translateY(0.76rem) rotate(0);
+        }
+
+        100% {
+            transform: translateY(0.76rem) rotate(45deg);
+        }
+    }
+
+    @keyframes burger-bottom {
+        0% {
+            transform: translateY(0) rotate(0);
+        }
+
+        75% {
+            transform: translateY(-0.76rem) rotate(0);
+        }
+
+        100% {
+            transform: translateY(-0.76rem) rotate(-45deg);
+        }
+    }
+
+    @keyframes burger-top-reverse {
+        0% {
+            transform: translateY(0.76rem) rotate(45deg);
+        }
+
+        75% {
+            transform: translateY(0.76rem) rotate(0);
+        }
+
+        100% {
+            transform: translateY(0) rotate(0);
+        }
+    }
+
+    @keyframes burger-bottom-reverse {
+        0% {
+            transform: translateY(-0.76rem) rotate(-45deg);
+        }
+
+        75% {
+            transform: translateY(-0.76rem) rotate(0);
+        }
+
+        100% {
+            transform: translateY(0) rotate(0);
+        }
     }
 }
