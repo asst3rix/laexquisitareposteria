@@ -1,4 +1,5 @@
 const burgerMenuManagement = (function () {
+    const title = document.querySelector('#title');
     const burger = document.querySelector('#burger-container');
     const navLinks = document.getElementById('nav-links');
     const links = document.querySelectorAll('.nav-links a');
@@ -9,15 +10,29 @@ const burgerMenuManagement = (function () {
         burger.classList.remove('clicked', 'unclicked');
         burger.classList.add(isOpening ? 'clicked' : 'unclicked');
         navLinks.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
     });
 
     // We're doing this to remove the burger menu after clicking on a link and set the icon back as a burger.
     links.forEach(link => {
         link.addEventListener('click', () => {
-            burger.classList.replace('clicked', 'unclicked');
-            navLinks.classList.remove('active');
+            shutDownMenu();
         });
     });
+
+    // If we click on the title of the header while the menu open
+    title.addEventListener('click', () => {
+        const menuOpen = document.body.classList.contains('menu-open');
+        if (menuOpen) {
+            shutDownMenu();
+        }
+    });
+
+    const shutDownMenu = () => {
+        burger.classList.replace('clicked', 'unclicked');
+        navLinks.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
 })();
 
 const thumbnailsManagement = (function () {
