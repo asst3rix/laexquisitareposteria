@@ -1,26 +1,21 @@
 const burgerMenuManagement = (function () {
     const burger = document.querySelector('#burger-container');
-    const line = document.querySelectorAll(".line");
     const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-links a');
 
     // When we click the burger menu, we show the menu and change the icon to a cross.
     burger.addEventListener('click', () => {
-        if (burger.classList.contains('clicked')) {
-            burger.classList.remove('clicked');
-            burger.classList.add('unclicked');
-        } else {
-            burger.classList.remove('unclicked');
-            burger.classList.add('clicked');
-        }
+        const isOpening = !burger.classList.contains('clicked');
+        burger.classList.remove('clicked', 'unclicked');
+        burger.classList.add(isOpening ? 'clicked' : 'unclicked');
         navLinks.classList.toggle('active');
     });
 
     // We're doing this to remove the burger menu after clicking on a link and set the icon back as a burger.
-    const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
+            burger.classList.replace('clicked', 'unclicked');
             navLinks.classList.remove('active');
-            burger.classList.remove('clicked');
         });
     });
 })();
