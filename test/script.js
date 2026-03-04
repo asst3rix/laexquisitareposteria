@@ -90,3 +90,21 @@ const thumbnailsManagement = (function () {
     // Set the observer to observe all images
     mainImages.forEach(img => observer.observe(img));
 })();
+
+const productCardsManagement = (function () {
+    const observerOptions = {
+        root: null, // null because we observe by default (the screen)
+        threshold: 0.3
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    const productCards = document.querySelectorAll('.product-cards');
+    productCards.forEach(product => observer.observe(product));
+})();
