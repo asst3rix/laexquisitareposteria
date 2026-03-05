@@ -247,6 +247,7 @@ footer {
 
 #aboutUsWrapper {
     background-color: white;
+    padding-block: 5rem;
 }
 
 #aboutUs {
@@ -462,6 +463,10 @@ footer {
 @media (width < 970px) {
     #products {
         grid-template-columns: 1fr;
+    }
+
+    #aboutUsWrapper {
+        padding-block: 0;
     }
 
     /**** BURGER MENU MANAGEMENT ****/
