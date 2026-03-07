@@ -165,6 +165,8 @@ nav a {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    width: 9rem;
+    justify-self: center;
 }
 
 main {
@@ -197,7 +199,8 @@ footer {
 }
 
 .product-cards img {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* #5 */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* #5 */
     transition: 0.1s;
 }
 
@@ -276,31 +279,76 @@ footer {
 #contact {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    gap: 2rem;
     text-align: center;
 }
 
-.contact-card {
+#contact h3,
+.information h4 {
+    font-size: 1.5rem;
+}
+
+.contact-cards {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
-    align-items: center;
 }
 
-.contact-card img {
-    width: 2rem;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-}
-
-.contact-card a {
-    color: var(--secondary-blue);
-}
-
-#socialMedia {
+.shops {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: clamp(30rem, 40rem, 100%);
+}
+
+.map-containers {
+    grid-column: 1 / 3;
+    min-height: 300px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.information a {
+    color: var(--secondary-blue);
+}
+
+.horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+#whatsapp {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#whatsapp a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.7rem;
+    color: #4cb550;
+}
+
+#whatsapp img {
+    max-width: 2.5rem;
 }
 
 /****** SPECIFIC: PRODUCT PAGES ******/
@@ -417,8 +465,12 @@ footer {
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
-    .contact-card a:hover {
+    .information a:hover {
         color: var(--light-blue);
+    }
+
+    #whatsapp a:hover {
+        font-size: 2rem;
     }
 
     #thumbnails img:hover {
