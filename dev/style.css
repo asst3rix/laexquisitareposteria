@@ -151,6 +151,7 @@ nav a {
     display: flex;
     font-size: 1.2rem;
     padding-top: 0.3125rem;
+    align-items: center;
 }
 
 .nav-links li {
@@ -163,10 +164,8 @@ nav a {
 
 #socialMediaHeader {
     display: flex;
-    justify-content: center;
     gap: 1.5rem;
     width: 9rem;
-    justify-self: center;
 }
 
 main {
