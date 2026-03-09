@@ -94,6 +94,7 @@ body {
 }
 
 header,
+#hero,
 #products,
 #product-content,
 #aboutUsWrapper,
@@ -174,6 +175,7 @@ section {
     scroll-margin-top: 5rem;
 }
 
+#hero,
 #products,
 #product-content,
 #aboutUs,
@@ -236,6 +238,21 @@ footer {
 }
 
 /****** SPECIFIC: INDEX.HTML ******/
+
+#hero {
+    background-image: linear-gradient(rgba(255, 242, 198, 0.8)), url('images/hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero h2 {
+    color: black;
+}
 
 #products {
     display: grid;
@@ -507,7 +524,11 @@ iframe {
     }
 }
 
-@media (width < 970px) {
+@media (width < 976px) {
+    #hero {
+        height: 100dvh;
+    }
+    
     #products {
         grid-template-columns: 1fr;
     }
