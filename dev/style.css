@@ -154,18 +154,14 @@ nav a {
     align-items: center;
 }
 
-.nav-links li {
-    line-height: 2rem;
-}
-
 #burger-container {
     display: none;
 }
 
 #socialMediaHeader {
     display: flex;
-    gap: 2rem;
-    width: 12rem;
+    gap: 1.5rem;
+    width: 8rem;
 }
 
 main {
@@ -660,6 +656,11 @@ iframe {
         100% {
             transform: translateY(0) rotate(0);
         }
+    }
+
+    #socialMediaHeader {
+        gap: 2rem;
+        width: 12rem;
     }
 
     /**** PRODUCT CARDS ****/
