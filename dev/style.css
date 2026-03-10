@@ -252,6 +252,13 @@ footer {
 
 #hero h2 {
     color: var(--light-blue);
+    font-size: clamp(2rem, 5vw + 1rem, 5rem);
+}
+
+#hero span {
+    font-style: italic;
+    color: var(--light-blue);
+    border-bottom: 5px solid white;
 }
 
 #products {
