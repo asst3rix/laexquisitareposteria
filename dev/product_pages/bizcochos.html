@@ -8,8 +8,9 @@
     <title>La Exquisita Repostería Hondurenya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
     <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png">
@@ -18,13 +19,108 @@
 </head>
 
 <body>
-    <header></header>
-    <main>
+    <header>
+        <div>
+            <h1><a href="../index.html#inicio"><img src="../images/title.png" alt="La Exquisita" id="title"></a></h1>
+            <div id="burger-container">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </div>
+        <nav>
+            <ul id="nav-links" class="nav-links">
+                <a href="../index.html#products">
+                    <li>Nuestros productos</li>
+                </a>
+                <a href="../index.html#aboutUs">
+                    <li>Sobre nosotros</li>
+                </a>
+                <a href="../index.html#contact">
+                    <li>Nuestras tiendas</li>
+                </a>
+                <li id="socialMediaHeader">
+                    <a href="https://wa.me/34642238331" target="_blank"><img src="../images/social_networks/whatsapp.png"
+                            alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/laexquisitabcn/" target="_blank"><img src="../images/social_networks/instagram.png"
+                            alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@laexquisitabcn" target="_blank"><img src="../images/social_networks/tic-tok.png"
+                            alt="Tik Tok"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="product-content">
         <article id="detailedProduct">
-            
+            <div id="mainImageContainer">
+                <img src="../images/products/pack_bizcochos_0.webp" alt="Un bizcocho">
+                <img src="../images/products/pack_bizcochos_1.webp" alt="El Pack Bizcochos">
+                <img src="../images/products/pack_bizcochos_2.webp" alt="Un bizcocho de cerca">
+                <img src="../images/products/pack_bizcochos_3.webp" alt="Un bizcocho cortado">
+            </div>
+            <div id="thumbnails">
+                <img src="../images/products/pack_bizcochos_0.webp" alt="Un bizcocho">
+                <img src="../images/products/pack_bizcochos_1.webp" alt="El Pack Bizcochos">
+                <img src="../images/products/pack_bizcochos_2.webp" alt="Un bizcocho de cerca">
+                <img src="../images/products/pack_bizcochos_3.webp" alt="Un bizcocho cortado">
+            </div>
+            <div id="productDescription">
+                <h1 id="productTitle">Pack Bizcochos</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt venenatis diam, ut
+                    vestibulum nisi commodo et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Fusce malesuada consequat ex id condimentum. Fusce dignissim tortor felis. Nam quis interdum
+                    odio. Integer viverra consectetur aliquam. Nunc velit dolor, ultricies eget faucibus ut,
+                    faucibus ultrices dolor.</p>
+                <p>Ut id sem a lectus faucibus blandit. Sed placerat bibendum orci non viverra. Integer id nisi
+                    lacus. Etiam semper quis mi et euismod. Maecenas sed ipsum quam.</p>
+                <div id="productPrice">
+                    <p>4,99€</p>
+                    <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
+                </div>
+            </div>
         </article>
+        <section id="otherProducts">
+            <h2>Tambien tenemos</h2>
+            <div id="productsGallery">
+                <article class="product-cards">
+                    <a href="semitas.html" target="_blank"><img src="../images/products/pack_semitas_0.webp" alt="El Pack Semitas"></a>
+                    <div class="product-info">
+                        <h3>Pack Semitas</h3>
+                        <p>4,99€</p>
+                        <div>
+                            <a href="semitas.html" target="_blank" class="buttons">Detalles</a>
+                            <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-cards">
+                    <a href="familiar.html" target="_blank"><img src="../images/products/pack_familiar_0.webp" alt="El Pack Familiar"></a>
+                    <div class="product-info">
+                        <h3>Pack Familiar</h3>
+                        <p>4,99€</p>
+                        <div>
+                            <a href="familiar.html" target="_blank" class="buttons">Detalles</a>
+                            <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-cards">
+                    <a href="galletas.html" target="_blank"><img src="../images/products/pack_galletas_0.webp" alt="El Pack Galletas"></a>
+                    <div class="product-info">
+                        <h3>Pack Galletas</h3>
+                        <p>4,99€</p>
+                        <div>
+                            <a href="galletas.html" target="_blank" class="buttons">Detalles</a>
+                            <a href="" target="_blank" class="buttons">¡Lo quiero!</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>&copy; 2026 La Exquisita Repostería Hondurenya</p>
+    </footer>
 </body>
 
 </html>
