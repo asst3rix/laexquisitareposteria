@@ -263,7 +263,7 @@ footer section {
 
 #hero h2 {
     color: var(--light-blue);
-    font-size: clamp(2rem, 5vw + 1rem, 5rem);
+    font-size: clamp(1.5rem, 4vw + 1rem, 5rem);
 }
 
 #hero span {
@@ -438,6 +438,17 @@ footer a {
     flex-direction: column;
     justify-content: flex-start;
     gap: 1rem 2rem;
+}
+
+#productDescription p,
+#productDescription ul {
+    font-size: 1.1rem;
+}
+
+#productDescription ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #productTitle {
