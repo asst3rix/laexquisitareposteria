@@ -220,16 +220,15 @@ footer section {
 }
 
 .product-info h3 {
-    min-width: 8.5rem;
-    text-align: start;
+    flex-grow: 1;
 }
 
 .product-info p {
-    text-align: end;
+    font-size: 1.7rem;
 }
 
 .product-info div {
-    flex: 1;
+    flex-basis: 100%;
     min-width: 13rem;
     display: flex;
     align-items: center;
