@@ -37,8 +37,7 @@ ol {
     /** COLORS **/
     --light-cream: #FFF8DE;
     --secondary-cream: #FFF2C6;
-    --light-blue: #AAC4F5;
-    --secondary-blue: #8CA9FF;
+    --light-blue: #87adf3;
 
     /** BURGER MENU **/
     --burger-anim-duration: 0.3s;
@@ -112,7 +111,6 @@ header,
 footer {
     background-color: var(--secondary-cream);
 }
-
 
 header {
     position: sticky;
@@ -241,7 +239,7 @@ footer section {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--secondary-blue);
+    color: var(--light-blue);
     border: 1px solid var(--light-blue);
     padding: 0.2rem 0;
     text-align: center;
@@ -275,7 +273,7 @@ footer section {
 #hero p {
     font-style: italic;
     font-size: 1.2rem;
-    color: var(--secondary-blue);
+    color: var(--light-blue);
 }
 
 #products {
@@ -310,6 +308,7 @@ footer section {
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
+    text-align: justify;
 }
 
 #contact {
@@ -359,7 +358,7 @@ iframe {
 
 .information a,
 footer a {
-    color: var(--secondary-blue);
+    color: var(--light-blue);
 }
 
 .horarios {
@@ -530,7 +529,7 @@ footer a {
     /* Hovering effect only on computer */
 
     nav a:hover {
-        color: var(--secondary-blue);
+        color: var(--light-blue);
     }
 
     .product-cards img:hover,
