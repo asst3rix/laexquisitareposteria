@@ -503,8 +503,8 @@ footer a {
     gap: 1rem 2rem;
 }
 
-#productDescription p,
-#productDescription ul {
+#productDescription > p,
+#productDescription > ul {
     font-size: 1.1rem;
 }
 
@@ -518,18 +518,8 @@ footer a {
     text-align: center;
 }
 
-#productPrice {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#productPrice p {
-    font-size: 2rem;
-}
-
-#productPrice a {
-    font-size: 1.1rem;
+#productDescription > a {
+    font-size: 1.5rem;
 }
 
 #otherProducts {
@@ -544,6 +534,15 @@ footer a {
     gap: 1rem 2rem;
     max-width: 50rem;
     margin: 0 auto;
+}
+
+#productsGallery .product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#productsGallery .product-buttons {
+    align-self: stretch;
 }
 
 /****** SPECIFIC: LEGAL ******/
@@ -601,17 +600,6 @@ footer a {
     #productPrice a:hover {
         cursor: pointer;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-
-    .loquiero:hover {
-        color: var(--light-blue);
-        background-color: var(--light-cream);
-    }
-
-    .detalles:hover,
-    #productPrice a:hover {
-        color: var(--light-cream);
-        background-color: var(--light-blue);
     }
 
     .information a:hover,
@@ -843,6 +831,20 @@ footer a {
 
     #productsGallery {
         grid-template-columns: 1fr;
+    }
+
+    #productsGallery .product-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #productsGallery .product-info h3,
+    #productsGallery .product-info .product-price {
+        flex-grow: 1;
+    }
+
+    #productsGallery .product-info .product-buttons {
+        flex-basis: 100%;
     }
 }
 
