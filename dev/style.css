@@ -426,13 +426,14 @@ footer a {
     gap: 0.5rem 1rem;
 }
 
-#whatsapp {
+.whatsapp {
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 1rem;
 }
 
-#whatsapp a {
+.whatsapp a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,7 +442,7 @@ footer a {
     color: #4cb550;
 }
 
-#whatsapp img {
+.whatsapp img {
     max-width: 2.5rem;
 }
 
@@ -607,7 +608,7 @@ footer a {
         color: var(--light-blue);
     }
 
-    #whatsapp a:hover {
+    .whatsapp a:hover {
         font-size: 2rem;
     }
 
