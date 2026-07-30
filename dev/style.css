@@ -303,6 +303,25 @@ footer section {
     background-color: var(--light-blue);
 }
 
+/****** COOKIE ******/
+
+.klaro .cookie-notice:not(.cookie-modal-notice) {
+    background-color: rgba(255, 242, 198, 0.9) !important;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.klaro .cookie-notice p {
+    color: var(--light-blue) !important;
+}
+
+.klaro .cookie-notice a {
+    color: #555 !important;
+}
+
+.klaro .cookie-notice .cm-btn.cm-btn-success {
+    background-color: var(--light-blue) !important;
+}
+
 /****** SPECIFIC: INDEX.HTML ******/
 
 #hero {
@@ -551,7 +570,7 @@ footer a {
 #legal {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
     padding-block: 2rem;
     padding-inline: 1.5rem;
@@ -566,6 +585,11 @@ footer a {
 
 #legal h2 {
     font-size: 1.5rem;
+}
+
+#legal h3 {
+    text-align: center;
+    font-family: 'Brygada 1918', serif;
 }
 
 .legal_sections {

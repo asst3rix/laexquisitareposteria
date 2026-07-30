@@ -4,34 +4,40 @@ const burgerMenuManagement = (function () {
     const navLinks = document.getElementById('nav-links');
     const links = document.querySelectorAll('.nav-links a');
 
-    // When we click the burger menu, we show the menu and change the icon to a cross.
-    burger.addEventListener('click', () => {
-        const isOpening = !burger.classList.contains('clicked');
-        burger.classList.remove('clicked', 'unclicked');
-        burger.classList.add(isOpening ? 'clicked' : 'unclicked');
-        navLinks.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-    });
-
-    // We're doing this to remove the burger menu after clicking on a link and set the icon back as a burger.
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            shutDownMenu();
+    // SÉCURITÉ : On vérifie que burger existe sur cette page
+    if (burger && navLinks) {
+        burger.addEventListener('click', () => {
+            const isOpening = !burger.classList.contains('clicked');
+            burger.classList.remove('clicked', 'unclicked');
+            burger.classList.add(isOpening ? 'clicked' : 'unclicked');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
-    });
+    }
 
-    // If we click on the title of the header while the menu open
-    title.addEventListener('click', () => {
-        const menuOpen = document.body.classList.contains('menu-open');
-        if (menuOpen) {
-            shutDownMenu();
-        }
-    });
+    if (links) {
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                shutDownMenu();
+            });
+        });
+    }
+
+    if (title) {
+        title.addEventListener('click', () => {
+            const menuOpen = document.body.classList.contains('menu-open');
+            if (menuOpen) {
+                shutDownMenu();
+            }
+        });
+    }
 
     const shutDownMenu = () => {
-        burger.classList.replace('clicked', 'unclicked');
-        navLinks.classList.remove('active');
-        document.body.classList.remove('menu-open');
+        if (burger && navLinks) {
+            burger.classList.replace('clicked', 'unclicked');
+            navLinks.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
     }
 })();
 
@@ -40,22 +46,19 @@ const thumbnailsManagement = (function () {
     const mainImages = document.querySelectorAll("#mainImageContainer img");
     const thumbnails = document.querySelectorAll("#thumbnails img");
 
-    // Update opacity of a thumbnails  given its index.
+    if (!mainImageContainer || thumbnails.length === 0) return; // SÉCURITÉ
+
     const updateOpacity = (index) => {
         thumbnails.forEach((img, i) => {
             img.style.opacity = (i === index) ? "1" : "0.7";
         });
     }
 
-    // To change primary picture on click on the gallery.
     thumbnails.forEach((img, index) => {
         img.addEventListener('click', () => {
-            // We save the index of the image that has been clicked on.
             const targetImg = mainImages[index];
-            // Security
             if (targetImg && mainImageContainer) {
                 mainImageContainer.scrollTo({
-                    // We make sure we start from the beginning of mainImageContainer and not the left of the screen.
                     left: targetImg.offsetLeft - mainImageContainer.offsetLeft
                 });
             }
@@ -63,37 +66,29 @@ const thumbnailsManagement = (function () {
         });
     });
 
-    // Observer management, to manage opacity of the active image when we swipe with the finger.
     const observerOptions = {
-        // We give him where to observe.
         root: mainImageContainer,
-        // Image is consider active when 100% of its surface is visible.
         threshold: 1
     };
 
-    // We give to IntersectionObserver, 1st the what to do (the function), 2nd what to use (observerOptions)
-    // one entry = one image
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // entry.isIntersecting is true when the threshold set above is reached.
             if (entry.isIntersecting) {
-                // Retrieve the index of the active image:
-                // 1. Array.from(mainImages) makes an array of the img DOM objects so indexOf can be used.
-                // 2. entry.target return the whole DOM object (ex: <img src="../images/pack1.png" alt="Pack Semitas">)
-                // 3. indexOf returns the index of the active image in the array.
                 const index = Array.from(mainImages).indexOf(entry.target);
                 updateOpacity(index);
             }
         });
     }, observerOptions);
 
-    // Set the observer to observe all images
     mainImages.forEach(img => observer.observe(img));
 })();
 
 const productCardsManagement = (function () {
+    const productCards = document.querySelectorAll('.product-cards');
+    if (productCards.length === 0) return; // SÉCURITÉ
+
     const observerOptions = {
-        root: null, // null because we observe by default (the screen)
+        root: null,
         threshold: 0.3
     }
 
@@ -105,6 +100,27 @@ const productCardsManagement = (function () {
         });
     }, observerOptions);
 
-    const productCards = document.querySelectorAll('.product-cards');
     productCards.forEach(product => observer.observe(product));
 })();
+
+/* CONFIGURATION DU BOUTON KLARO SUR LA PAGE RGPD */
+document.addEventListener('DOMContentLoaded', function () {
+  const openKlaroBtn = document.getElementById('open-klaro-btn');
+
+  if (openKlaroBtn) {
+    openKlaroBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (typeof klaro !== 'undefined') {
+        if (typeof klaro.show === 'function') {
+          klaro.show(window.klaroConfig, true);
+        } else if (typeof klaro.getManager === 'function') {
+          const manager = klaro.getManager();
+          if (manager) manager.showModal();
+        }
+      } else {
+        console.error("Klaro n'est pas encore disponible.");
+      }
+    });
+  }
+});
