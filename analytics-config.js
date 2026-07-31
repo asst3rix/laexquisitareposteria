@@ -54,5 +54,5 @@ const cookiesManagement = (function () {
     };
 
     window.gtag('js', new Date());
-    window.gtag('config', 'G-XXXXXXXXXX'); // Ton vrai ID ici = ZBM0Q9GGKM
+    window.gtag('config', 'G-ZBM0Q9GGKM');
 })();
