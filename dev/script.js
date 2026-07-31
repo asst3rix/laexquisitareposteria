@@ -103,24 +103,26 @@ const productCardsManagement = (function () {
     productCards.forEach(product => observer.observe(product));
 })();
 
-/* CONFIGURATION DU BOUTON KLARO SUR LA PAGE RGPD */
-document.addEventListener('DOMContentLoaded', function () {
-  const openKlaroBtn = document.getElementById('open-klaro-btn');
+const klaroButtonRGPD = (function () {
+    /* CONFIGURATION DU BOUTON KLARO SUR LA PAGE RGPD */
+    document.addEventListener('DOMContentLoaded', function () {
+        const openKlaroBtn = document.getElementById('open-klaro-btn');
 
-  if (openKlaroBtn) {
-    openKlaroBtn.addEventListener('click', function (e) {
-      e.preventDefault();
+        if (openKlaroBtn) {
+            openKlaroBtn.addEventListener('click', function (e) {
+                e.preventDefault();
 
-      if (typeof klaro !== 'undefined') {
-        if (typeof klaro.show === 'function') {
-          klaro.show(window.klaroConfig, true);
-        } else if (typeof klaro.getManager === 'function') {
-          const manager = klaro.getManager();
-          if (manager) manager.showModal();
+                if (typeof klaro !== 'undefined') {
+                    if (typeof klaro.show === 'function') {
+                        klaro.show(window.klaroConfig, true);
+                    } else if (typeof klaro.getManager === 'function') {
+                        const manager = klaro.getManager();
+                        if (manager) manager.showModal();
+                    }
+                } else {
+                    console.error("Klaro n'est pas encore disponible.");
+                }
+            });
         }
-      } else {
-        console.error("Klaro n'est pas encore disponible.");
-      }
     });
-  }
-});
+})();
