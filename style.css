@@ -604,6 +604,10 @@ footer a {
     gap: 1rem;
 }
 
+#cookies {
+    scroll-margin-top: 7rem;
+}
+
 /****** HOVER EFFECT ******/
 
 @media (hover: hover) {
