@@ -248,8 +248,8 @@ footer section {
     grid-column: 2 / 3;
     font-size: 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
     justify-content: center;
 }
 
