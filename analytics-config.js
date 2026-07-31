@@ -5,7 +5,7 @@ const cookiesManagement = (function () {
     // 1. Exposer klaroConfig sur l'objet window pour que Klaro le trouve
     window.klaroConfig = {
         lang: 'es',
-        privacyPolicy: '/laexquisitareposteria/dev/legal/rgpd.html#cookies',
+        privacyPolicy: '/laexquisitareposteria/legal/rgpd.html#cookies',
         elementID: 'klaro',
         cookieName: 'klaro_consent',
         cookieExpiresAfterDays: 365,
