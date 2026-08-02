@@ -169,7 +169,7 @@ main {
     flex: 1;
 }
 
-section {
+section, #socialMediaFooter {
     scroll-margin-top: 5rem;
 }
 
@@ -179,6 +179,12 @@ section {
 #aboutUs,
 #contact {
     padding-block: 2rem;
+}
+
+#socialMediaFooter div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 footer {
@@ -442,6 +448,7 @@ footer a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    align-items: center;
     gap: 0.5rem 1rem;
 }
 
@@ -660,11 +667,11 @@ footer a {
     }
 }
 
-@media (width < 976px) {
+@media (width < 1091px) {
     
 }
 
-@media (width < 976px) {
+@media (width < 1091px) {
     #hero {
         height: calc(100dvh - 92px);
     }
