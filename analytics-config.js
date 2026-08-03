@@ -2,7 +2,14 @@
 const cookiesManagement = (function () {
     'use strict';
 
-    // 1. Exposer klaroConfig sur l'objet window pour que Klaro le trouve
+    // Détection de l'environnement local
+    const isLocalhost = Boolean(
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname.endsWith('.local') ||
+        window.location.protocol === 'file:'
+    );
+
     window.klaroConfig = {
         lang: 'es',
         privacyPolicy: '/laexquisitareposteria/legal/rgpd/index.html#cookies',
@@ -45,14 +52,17 @@ const cookiesManagement = (function () {
         ],
     };
 
-    // 2. Initialisation sécurisée de Google Analytics
-    window.dataLayer = window.dataLayer || [];
+    // Initialisation de Google Analytics (SEULEMENT si on N'EST PAS en local)
+    if (!isLocalhost) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+            window.dataLayer.push(arguments);
+        };
 
-    // Attaché à window pour que d'autres scripts puissent éventuellement l'appeler
-    window.gtag = function () {
-        window.dataLayer.push(arguments);
-    };
-
-    window.gtag('js', new Date());
-    window.gtag('config', 'G-ZBM0Q9GGKM');
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-ZBM0Q9GGKM'); // Ton vrai ID
+    } else {
+        // Optionnel : un petit message discret dans la console F12
+        console.log("Google Analytics is disabled in local environment.");
+    }
 })();
