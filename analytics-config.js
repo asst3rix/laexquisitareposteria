@@ -61,6 +61,7 @@ const cookiesManagement = (function () {
 
         window.gtag('js', new Date());
         window.gtag('config', 'G-ZBM0Q9GGKM'); // Ton vrai ID
+        console.log("GAON.");
     } else {
         // Optionnel : un petit message discret dans la console F12
         console.log("Google Analytics is disabled in local environment.");
