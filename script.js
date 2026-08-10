@@ -126,3 +126,29 @@ const klaroButtonRGPD = (function () {
         }
     });
 })();
+
+const tiktokWarningManagement = (function () {
+    function isTiktokBrowser() {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        return /TikTok|musical_ly|BytedanceWebview/i.test(ua);
+    }
+
+    function closeTikTokOverlay() {
+        document.querySelector("#tiktokWarning").style.display = "none";
+        document.body.style.overflow = ""; // Libère le scroll de la page
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (isTiktokBrowser()) {
+            document.querySelector("#tiktokWarning").style.display = "flex";
+            document.body.style.overflow = "hidden"; // Verrouille le scroll
+        }
+    });
+
+    const dismissTiktokWarning = document.querySelector('.dismissTiktokWarning');
+    if (dismissTiktokWarning) {
+        dismissTiktokWarning.addEventListener('click', () => {
+            closeTikTokOverlay();
+        })
+    }
+})();
